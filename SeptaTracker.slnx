@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="SeptaTracker.Api/SeptaTracker.Api.csproj" />
+  <Project Path="SeptaTracker.Tests/SeptaTracker.Tests.csproj" />
+</Solution>
