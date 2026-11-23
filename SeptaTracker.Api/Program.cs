@@ -13,6 +13,9 @@ builder.Services.AddOpenApi();
 builder.Services.AddDbContext<SeptaDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("SeptaDb")));
 
+builder.Services.AddHttpClient<SeptaClient>(client =>
+    client.BaseAddress = new Uri("https://www3.septa.org/api/"));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
