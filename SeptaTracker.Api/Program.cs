@@ -16,6 +16,8 @@ builder.Services.AddDbContext<SeptaDbContext>(options =>
 builder.Services.AddHttpClient<SeptaClient>(client =>
     client.BaseAddress = new Uri("https://www3.septa.org/api/"));
 
+builder.Services.AddHostedService<TrainSnapshotWorker>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
